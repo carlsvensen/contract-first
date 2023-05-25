@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>dk.cygni</groupId>
+		<artifactId>contract-first</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>contract</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>contract</name>
+	<description>contract</description>
+
+	<modules>
+		<module>spring-server</module>
+		<module>java-client</module>
+		<module>random-stuff</module>
+	</modules>
+
+	<packaging>pom</packaging>
+
+	<properties>
+		<java.version>17</java.version>
+	</properties>
+
+	<build>
+		<plugins>
+			<!--plugin>
+				<groupId>org.openapitools</groupId>
+				<artifactId>openapi-generator-maven-plugin</artifactId>
+				<version>6.6.0</version>
+				<executions-->
+					<!--execution>
+						<id>csharp client</id>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<inputSpec>${project.basedir}/src/main/resources/spec.yaml</inputSpec>
+							<generatorName>csharp</generatorName>
+							<configOptions>
+								<packageName>Cygni.ContractFirst</packageName>
+							</configOptions>
+						</configuration>
+					</execution>
+					<execution>
+						<id>angular client</id>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<inputSpec>${project.basedir}/src/main/resources/spec.yaml</inputSpec>
+							<generatorName>typescript-angular</generatorName>
+						</configuration>
+					</execution>
+
+				</executions>
+			</plugin-->
+		</plugins>
+	</build>
+
+</project>
