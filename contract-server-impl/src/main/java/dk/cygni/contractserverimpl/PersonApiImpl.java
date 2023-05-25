@@ -6,24 +6,34 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.List;
 
 @RestController
 public class PersonApiImpl implements PersonApi {
 
-    @Override
-    public ResponseEntity<List<Person>> getPerson() {
+    HashMap<Long, Person> personMap = new HashMap<>();
+    public PersonApiImpl() {
+        Person person = new Person(1L, "Fornavn", "Etternavn", "Adress 1a");
+        personMap.put(person.getId(), person);
+    }
 
-        return new ResponseEntity<>(List.of(new Person(1L, "Fornavn", "Etternavn", "Adress 1a")), HttpStatus.OK);
+    @Override
+    public ResponseEntity<List<Person>> getPersons() {
+        return new ResponseEntity<>(
+                personMap.values().stream().toList(),
+                HttpStatus.OK);
     }
 
     @Override
     public ResponseEntity<Person> getPersonById(Long id) {
-        return null;
+        return new ResponseEntity<>(
+                personMap.get(id),
+                HttpStatus.OK);
     }
 
     @Override
     public ResponseEntity<Void> updatePerson(Long id, String firstname, String lastname) {
-        return null;
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }

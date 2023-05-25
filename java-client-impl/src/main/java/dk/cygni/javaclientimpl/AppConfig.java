@@ -15,6 +15,6 @@ public class AppConfig {
         PersonApi personApi = new PersonApi();
         personApi.setCustomBaseUrl("http://localhost:8081");
 
-        System.out.println("Found some persons: " + personApi.getPerson());
+        System.out.println("Found some persons: " + personApi.getPersons());
     }
 }

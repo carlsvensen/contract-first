@@ -20,7 +20,7 @@ paths:
         - person
       summary: Finds all registered Persons
       description: A more detailed description of the Persons that are available
-      operationId: getPerson
+      operationId: getPersons
       responses:
         '200':
           description: successful operation
@@ -56,9 +56,6 @@ paths:
           description: successful operation
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/Person'
-            application/xml:
               schema:
                 $ref: '#/components/schemas/Person'
         '400':

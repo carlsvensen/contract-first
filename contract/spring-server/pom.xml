@@ -85,7 +85,6 @@
                                 <apiPackage>dk.cygni.contract.server.api</apiPackage>
                                 <modelPackage>dk.cygni.contract.server.model</modelPackage>
                                 <skipDefaultInterface>true</skipDefaultInterface>
-                                <!--useSpringController>true</useSpringController-->
                             </configOptions>
                         </configuration>
                     </execution>
