@@ -1,12 +1,12 @@
 openapi: 3.0.3
 info:
-  title: Swagger Petstore - OpenAPI 3.0
+  title: Contract first example - OpenAPI 3.1
   description: >-
     An example of contract first. It might be a good idé to use [The Swagger
     editor](https://editor.swagger.io) to generate to openapi specification
     file.
   contact:
-    email: carl.svensen@cygni.com
+    email: carl.svensen@cygni.se
   version: 0.0.1-SNAPSHOT
 servers:
   - url: http://localhost:8080
