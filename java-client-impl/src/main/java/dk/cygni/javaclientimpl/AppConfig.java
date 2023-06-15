@@ -13,7 +13,6 @@ public class AppConfig {
     @Scheduled(fixedRate = 10000)
     public void readAndPrintPersons() throws ApiException {
         PersonApi personApi = new PersonApi();
-        personApi.setCustomBaseUrl("http://localhost:8081");
 
         System.out.println("Found some persons: " + personApi.getPersons());
     }

@@ -14,7 +14,7 @@ tags:
   - name: person
     description: Everything about a Person
 paths:
-  /person:
+  /persons:
     get:
       tags:
         - person
@@ -36,7 +36,7 @@ paths:
           description: Something wrong with the network
         '503':
           description: Something wrong with the server
-  /person/{id}:
+  /persons/{id}:
     get:
       tags:
         - person
@@ -100,7 +100,7 @@ components:
         - id
         - firstname
         - lastname
-        - adress
+        - address
       type: object
       properties:
         id:
@@ -113,6 +113,6 @@ components:
         lastname:
           type: string
           example: Navnesen
-        adress:
+        address:
           type: string
-          example: Adress 1a
+          example: Address 1a
